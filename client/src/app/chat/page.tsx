@@ -23,7 +23,7 @@ const ChatPage = () => {
     // Load initial messages
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/api/messages", {
+      .get("https://chat-app-backend-on00.onrender.com/api/messages", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

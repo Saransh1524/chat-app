@@ -37,13 +37,13 @@ const ChatInput = ({
 
     const fetchSuggestionsAndTranslation = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/api/smart-reply", {
+        const res = await axios.post("https://chat-app-backend-on00.onrender.com/api/smart-reply", {
           message: lastMessage,
         });
         setSuggestions(res.data.suggestions || []);
 
         const translationRes = await axios.post(
-          "http://localhost:5000/api/translate",
+          "https://chat-app-backend-on00.onrender.com/api/translate",
           {
             message: lastMessage,
             targetLanguage: preferredLanguage,

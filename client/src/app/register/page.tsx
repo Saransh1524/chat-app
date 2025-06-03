@@ -10,7 +10,7 @@ const RegisterPage = () => {
 
   const handleRegister = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/register", {
+      const res = await axios.post("https://chat-app-backend-on00.onrender.com/api/register", {
         username,
         password,
       });
